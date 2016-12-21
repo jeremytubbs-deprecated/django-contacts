@@ -23,7 +23,7 @@ class PhoneSerializer(serializers.ModelSerializer):
         fields = ('phone', 'phone_type', 'url')
 
 
-class PersonSerializer(serializers.HyperlinkedModelSerializer):
+class PersonSerializer(serializers.ModelSerializer):
     addresses = AddressSerializer(read_only=True, many=True)
     emails = EmailAddressSerializer(read_only=True, many=True)
     phones = PhoneSerializer(read_only=True, many=True)
