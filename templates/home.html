@@ -1,0 +1,13 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css"
+              href="{% static "css/app.css" %}" >
+    </head>
+    <body ng-app="contacts">
+        <ng-view></ng-view>
+
+        <script src="{% static "js/app.js" %}"></script>
+    </body>
+</html>
