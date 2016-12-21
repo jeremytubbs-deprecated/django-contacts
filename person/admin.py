@@ -1,5 +1,6 @@
 from django.contrib import admin
-from person.models import Name, Address, EmailAddress, Phone
+from .models import Name, Address, EmailAddress, Phone
+
 
 class AddressInline(admin.TabularInline):
     model = Address
