@@ -22,6 +22,10 @@ class PersonAdmin(admin.ModelAdmin):
         EmailInline,
         PhoneInline,
     ]
+    search_fields = [
+        'first_name',
+        'last_name',
+    ]
 
 
 admin.site.register(Name, PersonAdmin)
