@@ -6,7 +6,7 @@ from .serializers import PersonSerializer, AddressSerializer, EmailAddressSerial
 
 
 class PersonViewSet(ModelViewSet):
-    queryset = Name.objects.all()
+    queryset = Name.objects.all().order_by('last_name')
     serializer_class = PersonSerializer
     permission_classes = (permissions.IsAuthenticated,)
 
